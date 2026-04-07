@@ -15,7 +15,7 @@ WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 ENCURTADOR = "https://tinyurl.com/api-create.php?url="
 
 piadas = [
-    "Como faz para deixar um carteiro triste? Você mata a família dele.",
+    "Por que os elétrons nunca são convidados para festas?Porque eles são muito negativos.",
     "Por que os fantasmas são péssimos para contar mentiras? Porque são transparentes.",
     "Por que a plantinha não foi atendida no hospital? Porque só tinha médico de plantão."
 ]
