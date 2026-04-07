@@ -9,8 +9,8 @@ load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
-BOT_NAME = "bot telegram"
-BOT_VERSION = "0.1"
+BOT_NAME = "Café e tapioca"
+BOT_VERSION = "1.0"
 WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 ENCURTADOR = "https://tinyurl.com/api-create.php?url="
 
@@ -75,11 +75,11 @@ async def comando_dado(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f'🎲 Você rolou um {resultado} (d{numero})')
 
 async def comando_moeda(update: Update, contexto: ContextTypes.DEFAULT_TYPE):
+    valor = contexto.args[0]
+    moeda = contexto.args[1]
     if len(contexto.args) < 2:
         await update.message.reply_text("Exemplo: /moeda 100 USD")
         return
-    valor = contexto.args[0]
-    moeda = contexto.args[1]
     url = f'https://economia.awesomeapi.com.br/json/last/{moeda}-BRL'
     response = requests.get(url)
     data = response.json()
